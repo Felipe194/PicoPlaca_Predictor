@@ -22,19 +22,20 @@ namespace PicoPlaca
         protected void Button1_Click(object sender, EventArgs e)
         {
             license = txtLicense.Text.ToString();
-            fecha = txtDate.Text.ToString();
-            //10/05/2020; //dd/mm/yyyy
+            fecha = txtDate.Text.ToString();            
             hora = txtHour.Text.ToString();
+            if (license == ""  || fecha == "" || hora == "")
+            {               
+                lblResultado.Text = "There are boxes empty";
+            }
+            else
+            {
+                Predictor pred = new Predictor();
 
-            Predictor pred = new Predictor();         
-
-            lblResultado.Text = "El día: "+ pred.diaXSemana(pred.determinarDia(fecha))+ " " + 
-                                pred.validarLicense(license,fecha,hora).ToString() + " con la placa terminada en " + pred.determinarUltimoDigitoPlaca(license) + " la hora true dentro del rango: "+pred.validarHora(hora).ToString() ;
+                lblResultado.Text = "The day " + pred.diaXSemana(pred.determinarDia(fecha)) + " " +
+                                    pred.validarLicense(license, fecha, hora).ToString() + " with the lincense plate ending in " + pred.determinarUltimoDigitoPlaca(license) + " at " + hora;
+            }
         }
 
-        protected void txtDate_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -7,9 +7,7 @@ namespace PicoPlaca
 {
     public class Predictor
     {
-        string valueLicense;
-        string valueDate;
-        string valueHour;
+        string valueLicense;        
         string nameDay;
 
 
@@ -26,19 +24,19 @@ namespace PicoPlaca
             {
                 autorizadoCircular = "you can't road";
             }
-            if ((valueLicense == "3" || valueLicense == "4") && determinarDia(fecha) == 2)
+            if ((valueLicense == "3" || valueLicense == "4") && (determinarDia(fecha) == 2) && validarHora(hora) == true)
             {
                 autorizadoCircular = "you can't road";
             }
-            if ((valueLicense == "5" || valueLicense == "6") && determinarDia(fecha) == 3)
+            if ((valueLicense == "5" || valueLicense == "6") && (determinarDia(fecha) == 3) && validarHora(hora) == true)
             {
                 autorizadoCircular = "you can't road";
             }
-             if ((valueLicense == "7" || valueLicense == "8") && determinarDia(fecha) == 4)
+             if ((valueLicense == "7" || valueLicense == "8") && (determinarDia(fecha) == 4) && validarHora(hora) == true)
             {
                 autorizadoCircular = "you can't road";
             }
-            if ((valueLicense == "9" || valueLicense == "0") && determinarDia(fecha) == 5)
+            if ((valueLicense == "9" || valueLicense == "0") && (determinarDia(fecha) == 5) && validarHora(hora) == true)
             {
                 autorizadoCircular = "you can't road";
             }
@@ -175,25 +173,25 @@ namespace PicoPlaca
 
             switch (diaSemana) {
                 case 0:
-                    nameDay = "domingo";
+                    nameDay = "sunday";
                     break;
                 case 1:
-                    nameDay = "lunes";
+                    nameDay = "monday";
                     break;
                 case 2:
-                    nameDay = "martes";
+                    nameDay = "tuesday";
                     break;
                 case 3:
-                    nameDay = "miércoles";
+                    nameDay = "wednesday";
                     break;
                 case 4:
-                    nameDay = "jueves";
+                    nameDay = "thrusday";
                     break;
                 case 5:
-                    nameDay = "viernes";
+                    nameDay = "friday";
                     break;
                 case 6:
-                    nameDay = "sábado";
+                    nameDay = "saturday";
                     break;
 
             }
@@ -211,7 +209,30 @@ namespace PicoPlaca
 
 
             hh = hora.Substring(0, 2);
-            mm = hora.Substring(3, 2);
+
+            if (hh.Substring(1, 1) == ":")
+            {
+                hh = "0" + hora.Substring(0, 1); //8:2
+                if (hora.Length ==3)
+                {
+                    mm = "0"+hora.Substring(2, 1);
+                }
+                else
+                {
+                    mm = hora.Substring(2, 2);
+                }
+            }
+            else
+            {
+                if (hora.Length == 4)//08:2
+                {
+                    mm = "0" + hora.Substring(3, 1);
+                }
+                else
+                {
+                    mm = hora.Substring(3, 2);
+                }
+            }
 
             if (hh == "07" || hh == "08" || (hh == "09" && mm =="01") || (hh == "09" && mm == "02") || (hh == "09" && mm == "03") || (hh == "09" && mm == "04") || (hh == "09" && mm == "05") || (hh == "09" && mm == "06") || 
                 (hh == "09" && mm == "07") || (hh == "09" && mm == "08") || (hh == "09" && mm == "09") || (hh == "09" && mm == "10") || (hh == "09" && mm == "11") || (hh == "09" && mm == "12") || (hh == "09" && mm == "13") || 

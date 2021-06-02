@@ -17,27 +17,26 @@
         <br />
 &nbsp;<div>
             <br />
-            <asp:Label ID="Label1" runat="server" Text="Placa:"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtLicense" runat="server"></asp:TextBox>
+            <asp:Label ID="Label1" runat="server" Text="License plate (ej. pbb2021):" Font-Size="Large"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtLicense" runat="server" Font-Size="Large"></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="Label2" runat="server" Text="Fecha(dd/mm/yyy):"></asp:Label>
-&nbsp;&nbsp;
-            <asp:TextBox ID="txtDate" runat="server" OnTextChanged="txtDate_TextChanged"></asp:TextBox>
+            <asp:Label ID="Label2" runat="server" Text="Date (dd/mm/yyy) (ej. 13/03/2021):" Font-Size="Large"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtDate" runat="server" Font-Size="Large" ></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="Label3" runat="server" Text="Hora (24h):"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtHour" runat="server"></asp:TextBox>
+            <asp:Label ID="Label3" runat="server" Text="Hour (24h)(ej. 13:00):" Font-Size="Large"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtHour" runat="server" Font-Size="Large"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnPredict" runat="server" Height="36px" OnClick="Button1_Click" Text="PREDECIR" Width="184px" />
+            <asp:Button ID="btnPredict" runat="server" Height="36px" OnClick="Button1_Click" Text="PREDICT" Width="184px" BorderStyle="Double" />
             <br />
         </div>
         <br />
         <asp:Panel ID="Panel1" runat="server" Height="44px" style="margin-top: 0px">
             &nbsp;
-            <asp:Label ID="lblResultado" runat="server" Font-Size="Larger"></asp:Label>
+            <asp:Label ID="lblResultado" runat="server" Font-Size="XX-Large" Font-Bold="True" ForeColor="#FF3300"></asp:Label>
         </asp:Panel>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
