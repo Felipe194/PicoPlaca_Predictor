@@ -18,17 +18,17 @@
 &nbsp;<div>
             <br />
             <asp:Label ID="Label1" runat="server" Text="Placa:"></asp:Label>
-&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtLicense" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="Label2" runat="server" Text="Fecha:"></asp:Label>
-&nbsp;
-            <asp:TextBox ID="txtDate" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:Label ID="Label3" runat="server" Text="Hora:"></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="Fecha(dd/mm/yyy):"></asp:Label>
 &nbsp;&nbsp;
+            <asp:TextBox ID="txtDate" runat="server" OnTextChanged="txtDate_TextChanged"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="Hora (24h):"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtHour" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnPredict" runat="server" Height="36px" OnClick="Button1_Click" Text="PREDECIR" Width="184px" />

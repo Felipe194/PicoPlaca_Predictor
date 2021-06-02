@@ -12,7 +12,7 @@ namespace PicoPlaca
     {
         string license = null;
         string fecha = null;
-        string hora = null;
+        string hora;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,8 +28,13 @@ namespace PicoPlaca
 
             Predictor pred = new Predictor();         
 
-            lblResultado.Text = pred.validarLicense(license,fecha).ToString() +
-                " Día de la semana: "+pred.determinarDia(fecha);
+            lblResultado.Text = "El día: "+ pred.diaXSemana(pred.determinarDia(fecha))+ " " + 
+                                pred.validarLicense(license,fecha,hora).ToString() + " con la placa terminada en " + pred.determinarUltimoDigitoPlaca(license) + " la hora true dentro del rango: "+pred.validarHora(hora).ToString() ;
+        }
+
+        protected void txtDate_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
