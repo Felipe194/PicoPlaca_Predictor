@@ -32,8 +32,8 @@ namespace PicoPlaca
             {
                 Predictor pred = new Predictor();
 
-                lblResultado.Text = "The day " + pred.diaXSemana(pred.determinarDia(fecha)) + " " +
-                                    pred.validarLicense(license, fecha, hora).ToString() + " with the lincense plate ending in " + pred.determinarUltimoDigitoPlaca(license) + " at " + hora;
+                lblResultado.Text = "On " + pred.diaXSemana(pred.determinarDia(fecha)) + " " +
+                                    pred.validarLicense(license, fecha, hora).ToString() + " if the license plate ends with a " + pred.determinarUltimoDigitoPlaca(license) + " at " + hora;
             }
         }
 
